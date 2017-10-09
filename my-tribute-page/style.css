@@ -1,0 +1,15 @@
+
+* {
+    font-size: 1.2rem;
+    font-family: 'Comfortaa', cursive;
+  }
+
+  h1 {
+      font-size: 45px;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  .nopadding {
+     padding: 0 !important;
+     margin: 0 !important;
+  }
