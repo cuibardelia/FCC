@@ -1,7 +1,8 @@
 
 * {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: 'Comfortaa', cursive;
+    text-align: justify;
   }
 
   h1 {
@@ -13,3 +14,11 @@
      padding: 0 !important;
      margin: 0 !important;
   }
+
+  #div1 {    
+    padding-right: 30px;   
+    background-color: red;    
+  }
+
+ 
+ 
