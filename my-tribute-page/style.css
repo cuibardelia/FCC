@@ -1,23 +1,55 @@
 
-* {
-    font-size: 1.4rem;
-    font-family: 'Comfortaa', cursive;
-    text-align: justify;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: 'Comfortaa', cursive;
+  text-align: justify;
+}
+
+  .header {
+    background-image: url("https://i.ytimg.com/vi/7YrvzRN-U2c/maxresdefault.jpg");
+    background-size:100%;
+    background-repeat:no-repeat;
+    height: 11rem;
+    
+  }
+
+  .container-fluid {
+    background-color: red;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+  }
+  
+  .well {
+    background-color:#fcfcfc;
+  }
+
+  .thumbnail {
+    width: 25rem;
   }
 
   h1 {
-      font-size: 45px;
+      font-size: 2.4rem;
       font-family: 'Montserrat', sans-serif;
   }
 
   .nopadding {
-     padding: 0 !important;
-     margin: 0 !important;
+     padding: 0px !important;
+     margin: 0px !important;
   }
 
-  #div1 {    
+  /* #div1 {    
     padding-right: 30px;   
-    background-color: red;    
+    /* background-color: red;  */ 
+  } */
+
+  #div2 {
+    margin-top: 10px;
   }
 
  
