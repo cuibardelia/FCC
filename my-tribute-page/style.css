@@ -1,11 +1,7 @@
 
-html {
-  font-size: 62.5%;
-}
-
 body {
-  font-size: 14px;
-  font-size: 1.4rem;
+  /* font-size: 14px;
+  font-size: 1.4rem; */
   font-family: 'Comfortaa', cursive;
   text-align: justify;
 }
@@ -14,43 +10,50 @@ body {
     background-image: url("https://i.ytimg.com/vi/7YrvzRN-U2c/maxresdefault.jpg");
     background-size:100%;
     background-repeat:no-repeat;
-    height: 11rem;
-    
+    height: 7.5rem;
+
   }
 
   .container-fluid {
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
     left: 15%;
     right: 15%;
   }
-  
+
   .well {
     background-color:#fcfcfc;
   }
 
-  .thumbnail {
-    width: 25rem;
-  }
 
   h1 {
-      font-size: 2.4rem;
+      font-size: 4rem;
       font-family: 'Montserrat', sans-serif;
   }
 
-  .nopadding {
-     padding: 0px !important;
-     margin: 0px !important;
+  blockquote {
+      font-size: 1.4rem;
   }
 
-  /* #div1 {    
-    padding-right: 30px;   
-    /* background-color: red;  */ 
+  /* #div1 {
+    padding-right: 30px;
+    /* background-color: red;  */
   } */
 
   #div2 {
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
- 
- 
+  .yellow-bk {
+    background-color: yellowgreen;
+  }
+
+  .row {
+     margin-right: 0px;
+     margin-left: 0px;
+}
+
+
+
+
+
