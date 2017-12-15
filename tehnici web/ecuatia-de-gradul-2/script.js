@@ -1,4 +1,12 @@
 
+$(function () {
+    var $doTheMath = $('#do-the-math');
+    var $aInput = $('#a');
+    var $bInput = $('#b');
+    var $cInput = $('#c');
+    var $container = $('#container');
+
+
 function show(message)
 {
     $('#container').html($('#container').html() + '<br>' + message);
@@ -18,12 +26,24 @@ function getX(a, b, c)
     return result;
 }
 
+    $doTheMath.click(function (e) {
+
+        var a = $aInput.val();
+        var b = $bInput.val();
+        var c = $cInput.val();
+
+        var result = getX(a, b, c);
+        if (typeof result == 'string') {
+            $container.html(result);
+        } else {
+            $container.html(result[0] + ", " + result[1]);
+        }
+
+        e.preventDefault();
+    });
 
 
-var result = getX(-3, 10, -3);
-
-show(result);
-
+});
 
 
 

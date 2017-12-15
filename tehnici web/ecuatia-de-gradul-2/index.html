@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>
+                <a href="../complexe/index.html">Complex numbers</a>
+            </li>
+            <li>
+                <a href="../matrici/index.html">Matrices</a>
+            </li>
+            <li>
+                <a href="./ecuatia-de-gradul-2/index.html">Quadratic equation</a>
+            </li>
+            <li>
+                <a href="../index.html">Go back home!</a>
+            </li>
+        </ul>
+    </nav>
     <div class="container-fluid well main-container">
 
         <div class="header sticky-top">
@@ -22,18 +38,20 @@
 
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer01">First name</label>
-                            <span><input type="text" class="form-control is-valid" id="validationServer01" placeholder="a" value="Mark" required>X +</span>
+                            <label for="validationServer01">X<sup>2</sup></label>
+                            <span><input type="number" class="form-control is-valid" id="a" placeholder="a" required>X +</span>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer02">Last name</label>
-                            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="b" value="Otto" required>X +
+                            <label for="validationServer02">X</label>
+                            <input type="number" class="form-control is-valid" id="b" placeholder="b" required>X +
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer02">Last name</label>
-                            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="c" value="Otto" required>
+                            <label for="validationServer02">c</label>
+                            <input type="number" class="form-control is-valid" id="c" placeholder="c"  required>
                         </div>
-
+                    </div>
+                    <div class="row center-content">
+                        <button type="submit" class="btn btn-info" id="do-the-math">Show X</button>
                     </div>
 
 
