@@ -11,67 +11,49 @@
 <body>
     <div class="container-fluid well main-container">
 
-        <div class="header sticky-top">
-            <h1 class="page-header text-center">Operatii cu numere complexe<h1>
+        <div class="header fill-gap-space">
+            <h1 class="page-header text-center">Complex number operations<h1>
         </div>
-
-        <div class="row fill-gap-space">
-
-        </div>
-
         <div class="row">
             <div class="col-md-8 col-md-offset-2 input-wrapper">
                 <form class="form-inline">
                     <div class="form-group">
-                            <p>NR 1</p>
-                            <label for="real-first" class="col-2 col-form-label">Parte reala</label>
+                            <p>1<sup>st</sup>N<sup>o</sup></p>
+                            <label for="real-first" class="col-2 col-form-label">Real part</label>
                             <input type="number" class="form-control number-forms" id="real-first" >
-                            <label for="imaginary-first" class="col-2 col-form-label">Parte imaginara</label>
+                            <label for="imaginary-first" class="col-2 col-form-label">Imaginary part</label>
                             <input type="number" class="form-control number-forms" id="imaginary-first" >
-                            <button type="submit" class="btn btn-warning" id="show-first-number">Afiseaza numar</button>
+                            <button type="submit" class="btn btn-warning" id="show-first-number">Show number</button>
                     </div>
                 </form>
                 <form class="form-inline">
                     <div class="form-group">
-                        <p>NR 2</p>
-                        <label for="real-second" class="col-2 col-form-label">Parte reala</label>
+                        <p>2<sup>nd</sup>N<sup>o</sup></p>
+                        <label for="real-second" class="col-2 col-form-label">Real part</label>
                         <input type="number" class="form-control number-forms" id="real-second">
-                        <label for="imaginary-second" class="col-2 col-form-label">Parte imaginara</label>
+                        <label for="imaginary-second" class="col-2 col-form-label">Imaginary part</label>
                         <input type="number" class="form-control number-forms" id="imaginary-second">
-                        <button type="submit" class="btn btn-warning" id="show-second-number">Afiseaza numar</button>
+                        <button type="submit" class="btn btn-warning" id="show-second-number">Show number</button>
                     </div>
                 </form>
-
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 buttons-container">
-                <button type="button" class="btn btn-warning button" id="plus-btn">+</button>
-                <button type="button" class="btn btn-warning button" id="subtract-btn">-</button>
-                <button type="button" class="btn btn-warning button" id="multiply-btn">x</button>
-                <button type="button" class="btn btn-warning button" id="divide-btn">/</button>
-            </div>
-        </div>
-
         <div class="row fill-gap-space">
-
+            <div class="col-md-8 col-md-offset-2 buttons-container">
+                <button type="button" class="btn btn-warning operation-button" id="plus-btn">+</button>
+                <button type="button" class="btn btn-warning operation-button" id="subtract-btn">-</button>
+                <button type="button" class="btn btn-warning operation-button" id="multiply-btn">x</button>
+                <button type="button" class="btn btn-warning operation-button" id="divide-btn">/</button>
+            </div>
         </div>
-
         <div class="row">
             <div class="col-md-8 col-md-offset-2 input-wrapper" id="equation-div" />
-
         </div>
-
-        <div class="row">
+        <div class="row fill-gap-space">
             <div class="col-md-8 col-md-offset-2 visible-border input-wrapper" id="result">
-                <p>REZULTAT</p>
+                <p>RESULT</p>
             </div>
         </div>
-
-        <div class="row fill-gap-space">
-
-        </div>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="my-script.js"></script>

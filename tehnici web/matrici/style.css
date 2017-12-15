@@ -2,24 +2,21 @@ h1 {
     color: #004d00;
     font-family: "Arial Black", Gadget, sans-serif;
 }
-#container-A {
-    width: 100%;
+
+.center-content {
+    text-align: center;
 }
 
-#container-B {
-    width: 100%;
-}
-
- .buttons-container {
+.buttons-container {
     text-align: center;
   }
 
-  .button {
-      width: 45px;
-      height: 45px;
+.button {
+    width: 45px;
+    height: 45px;
   }
 
-  input {
+input {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -32,12 +29,14 @@ h1 {
     width: 60px;
 }
 
-  .fill-gap-space {
-      height: 100px;
-  }
+#container-A {
+    width: 100%;
+}
 
-  .center-content {
-      text-align: center;
-  }
+#container-B {
+    width: 100%;
+}
+
+
 
 

@@ -1,17 +1,15 @@
-// FUNCTII MATEMATICE:
+// Mathematical functions:
 
-function addMatrices(a, b)
-{
+function addMatrices(a, b) {
     var nrLinesA = a.length;
     var nrLinesB = b.length;
     var nrColumnsA = a[0].length;
     var nrColumnsB = b[0].length;
 
     if (nrLinesA != nrLinesB || nrColumnsA != nrColumnsB) {
-        return 'Nu se poate face adunarea. Pentru operatia de adunare, matricile trebuie sa aiba același număr de linii și același număr de coloane';
+        return 'Cannot add matrices! For this specific operation, the matrices must have the same number of lines and columns, respectively';
     }
     var result = [];
-
     for (var i = 0; i < nrLinesA; i++) {
         result[i] = [];
         for (var j = 0; j < nrColumnsA; j++) {
@@ -21,18 +19,16 @@ function addMatrices(a, b)
     return result;
 }
 
-function multiplyMatrices(a, b)
-{
+function multiplyMatrices(a, b) {
     var nrLinesA = a.length;
     var nrLinesB = b.length;
     var nrColumnsA = a[0].length;
     var nrColumnsB = b[0].length;
 
     if (nrColumnsA != nrLinesB) {
-        return 'Nu se poate face inmultirea. Pentru operatia de inmultire, numărul de coloane ale lui A trebuie sa fie egal cu numărul de linii ale lui B';
+        return 'Cannot multiply matrices! For this specific operation, the number of columns of the first matrix must be equal to the number of rows of the second matrix';
     }
     var result = [];
-
     for (var i = 0; i < nrLinesA; ++i) {
         result[i] = [];
         for (var j = 0; j < nrColumnsB; ++j) {
@@ -47,15 +43,13 @@ function multiplyMatrices(a, b)
 }
 
 
-// FUNCTII DE PRELUCRARE DATE DIN/IN DOM:
+// Functions designed to retrieve/pass data from/to the document:
 
 function getMatrixFromDocument(letter) {
-
     var lines = document.getElementById("lines-" + letter).value;
     var columns = document.getElementById("columns-" + letter).value;
 
     var myMatrix = [];
-
     for (var i = 0; i < lines; i++) {
         myMatrix[i] = [];
         for (var j = 0; j < columns; j++) {
@@ -68,7 +62,6 @@ function getMatrixFromDocument(letter) {
 }
 
 function validateMatrix(myMatrix) {
-
     var lines = myMatrix.length;
     var columns = myMatrix[0].length;
 
@@ -82,10 +75,7 @@ function validateMatrix(myMatrix) {
     return true;
 }
 
-
-function generateMatrix(letter)
-{
-
+function generateMatrix(letter) {
     var lines = document.getElementById("lines-" + letter).value;
     var columns = document.getElementById("columns-" + letter).value;
     var container = document.getElementById("container-" + letter);
@@ -107,9 +97,7 @@ function generateMatrix(letter)
     }
 }
 
-function generateCInput(lines, columns)
-{
-
+function generateCInput(lines, columns) {
     var container = document.getElementById("container-C");
 
     var input = document.createElement("input");
@@ -127,7 +115,6 @@ function generateCInput(lines, columns)
 
 
 function populateMatrix(myMatrix) {
-
     var lines = myMatrix.length;
     var columns = myMatrix[0].length;
 
@@ -143,33 +130,26 @@ function populateMatrix(myMatrix) {
 
 //EVENT LISTENERS:
 
-//Generare Matrice A
 document.getElementById("fill-matrix-A").addEventListener("click", function () {
-
     generateMatrix('A');
 });
 
-//Generare Matrice B
 document.getElementById("fill-matrix-B").addEventListener("click", function () {
-
     generateMatrix('B');
 });
 
-//
 document.getElementById("plus-btn").addEventListener("click", function () {
-
     var a = [];
     var b = [];
     a = getMatrixFromDocument('A');
     b = getMatrixFromDocument('B');
 
     if (validateMatrix(a) == false || validateMatrix(b) == false) {
-        alert('Va rugam populati complet ambele matrici cu numere');
+        alert('Please add numbers (exclusively) to all inputs!');
         return;
     }
 
     var result = [];
-
     result = addMatrices(a, b);
 
     if (typeof result == 'string') {
@@ -178,24 +158,21 @@ document.getElementById("plus-btn").addEventListener("click", function () {
         generateCInput('lines-A', 'columns-A');
         generateMatrix('C');
         populateMatrix(result);
-        console.table(result);
     }
 });
 
 document.getElementById("multiply-btn").addEventListener("click", function () {
-
     var a = [];
     var b = [];
     a = getMatrixFromDocument('A');
     b = getMatrixFromDocument('B');
 
     if (validateMatrix(a) == false || validateMatrix(b) == false) {
-        alert('Va rugam populati complet ambele matrici cu numere');
+        alert('Please add numbers (exclusively) to all inputs!');
         return;
     }
 
     var result = [];
-
     result = multiplyMatrices(a, b);
 
     if (typeof result == 'string') {
@@ -204,7 +181,6 @@ document.getElementById("multiply-btn").addEventListener("click", function () {
         generateCInput('lines-A', 'columns-B');
         generateMatrix('C');
         populateMatrix(result);
-        console.table(result);
     }
 });
 
