@@ -1,0 +1,12 @@
+.upper-gap {
+    margin-top: 50px;
+}
+
+#timer {
+    width: 70px;
+}
+
+input {
+    color: #ff1a1a;
+    font-weight: bold;
+}

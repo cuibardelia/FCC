@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Factorials</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+        <script>
+            function addZeros(s)
+            {
+            if (parseInt(s) < 10) {
+                return '0' + s;
+            }
+                return s;
+            }
+
+            function showClock()
+            {
+            d = new Date();
+            var s = "";
+            if (parseInt(d.getHours()) <= 9) {
+                s += "0" + d.getHours() + ":";
+            } else {
+                s += "" + d.getHours() + ":";
+            }
+            if (parseInt(d.getMinutes()) <= 9) {
+                s += "0" + d.getMinutes() + ":";
+            } else {
+                 s += d.getMinutes() + ":";
+            }
+            if (parseInt(d.getSeconds()) <= 9) {
+                    s += "0" + d.getSeconds();
+            } else {
+                    s += "" + d.getSeconds();
+            }
+            document.getElementById("timer").value = s;
+            }
+
+            function factorial()
+            {
+            var n = document.getElementById("number").value;
+            var fact = 1;
+            for (var i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            document.getElementById("result").value = fact;
+            }
+
+        </script>
+    </head>
+
+    <body onload="showClock()">
+        <div class="jumbotron jumbotron-fluid bg-danger text-white text-center">
+            <div class="container">
+                <h1 class="display-4">Let's get some factorial numbers</h1>
+                <p class="text-muted">Check the factorial result of different numbers</p>
+                <hr class="my-4">
+                    <div class="text-center">
+                        <input id="timer">
+                    </div>
+            </div>
+        </div>
+        <div>
+            <nav class="navbar navbar-light bg-faded">
+                <a class="navbar-brand" href="../complexe/index.html">Complex numbers</a>
+                <a class="navbar-brand" href="../matrici/index.html">Matrices</a>
+                <a class="navbar-brand" href="../ecuatia-de-gradul-2/index.html">Quadratic equation</a>
+                <a class="navbar-brand" href="#">Factorials</a>
+                <a class="navbar-brand" href="../index.html">Go back home!</a>
+            </nav>
+        </div>
+
+        <div class="container text-center upper-gap">
+            <h2>Calculator factorial</h2>
+            <input id="number" type="number" value="0" min="0" >
+            <button id="calculate" class="btn btn-danger" onclick=factorial();>Calculeaza</button>
+            <input id="result">
+
+        </div>
+
+    </body>
+
+</html>
