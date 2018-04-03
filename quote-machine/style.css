@@ -1,0 +1,54 @@
+body {
+    background: 
+    radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(#A8B1BB 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #A8B1BB 8px, transparent 8px) -4px 0;
+    background-color: slategray;
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+h1 { 
+    font-size: 3.2rem;
+    text-align: center; 
+    color: rgb(78, 50, 16);
+}
+
+.container {
+    padding: 50px;
+    display: grid;
+    align-content: center;
+    justify-content: center;    
+}
+.quote-container {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background: bisque;
+    height: 400px;
+    width: 700px;;
+    -webkit-box-shadow: -18px 25px 71px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -18px 25px 71px -12px rgba(0,0,0,0.75);
+    box-shadow: -18px 25px 71px -12px rgba(0,0,0,0.75);
+    border-radius: 18px 18px 18px 18px;
+    -moz-border-radius: 18px 18px 18px 18px;
+    -webkit-border-radius: 18px 18px 18px 18px;
+    border: 0px solid #000000;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.new-quote {
+    height: 30%;
+    width: 30%;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.media {
+    font-size: 16px; 
+    cursor: pointer; 
+    color: yellow;
+}
+
